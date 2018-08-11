@@ -11,7 +11,7 @@ int	rush(int x, int y)
 	{
 		while (c < y)
 		{
-			if (
+			if (t
 		}
 		l++;
 	}
