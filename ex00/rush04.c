@@ -6,7 +6,7 @@
 /*   By: dabeloos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/11 09:20:34 by dabeloos          #+#    #+#             */
-/*   Updated: 2018/08/11 11:10:04 by dabeloos         ###   ########.fr       */
+/*   Updated: 2018/08/12 04:12:09 by dabeloos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	rush(int x, int y)
 	int	l;
 	int	c;
 
+	if (x <= 0)
+		return ;
 	l = 0;
 	while (l < y)
 	{
@@ -25,7 +27,7 @@ void	rush(int x, int y)
 		{
 			if (c + l == 0 || c + l == x + y - 2)
 				ft_putchar('A');
-			else if ((c == 0 && l == x - 1) || (c == y - 1 && l == 0))
+			else if ((c == 0 && l == y - 1) || (c == x - 1 && l == 0))
 				ft_putchar('C');
 			else if (l == 0 || l == y - 1 || c == 0 || c == x - 1)
 				ft_putchar('B');
